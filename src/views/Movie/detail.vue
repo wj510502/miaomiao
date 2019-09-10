@@ -6,7 +6,7 @@
     <Loading v-if="isLoading"/>
 		<div v-else id="content" class="contentDetail">
 			<div class="detail_list">
-				<div class="detail_list_bg"></div>
+				<div class="detail_list_bg" :style="{'background-image' : 'url('+ detailMovie.img.replace(/w\.h/,'148.208') +')'}"></div>
 				<div class="detail_list_filter"></div>
 				<div class="detail_list_content">
 					<div class="detail_list_img">
@@ -40,7 +40,7 @@
 
 <script>
 import Header from '@/components/Header'
-import { nextTick } from 'q';
+import {nextTick} from 'q';
 export default {
   name: 'Detail',
   data(){
